@@ -3,11 +3,11 @@ import { AllWeatherInfo } from 'src/app/services/interfaces/all-weather-info.int
 import { WeatherService } from 'src/app/services/weather.service';
 
 @Component({
-  selector: 'app-weather',
-  templateUrl: './weather.component.html',
-  styleUrls: ['./weather.component.css']
+  selector: 'app-cur-weather',
+  templateUrl: './current-weather.component.html',
+  styleUrls: ['./current-weather.component.css']
 })
-export class WeatherComponent {
+export class CurrentWeatherComponent {
   // @ts-ignore
   @Input() info: AllWeatherInfo;
 

@@ -46,7 +46,7 @@ import {MatTreeModule} from '@angular/material/tree';
 import {OverlayModule} from '@angular/cdk/overlay';
 
 import { AppComponent } from './app.component';
-import { WeatherComponent } from './components/weather/weather.component';
+import {CurrentWeatherComponent} from './components/current-weather/current-weather.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
@@ -55,7 +55,7 @@ import { WeatherService } from './services/weather.service';
 @NgModule({
   declarations: [
     AppComponent,
-    WeatherComponent,
+    CurrentWeatherComponent,
   ],
   imports: [
     A11yModule,

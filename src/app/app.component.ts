@@ -15,8 +15,8 @@ export class AppComponent implements OnInit{
   info: AllWeatherInfo;
   curWeather: boolean = false;
   weatherByHours: boolean = false;
-  btnCurWeatherTitle: string = 'Show current weather';
-  btnWeatherByHoursTitle: string = 'Show weather by hours';
+  btnCurWeatherTitle: string = 'Show current current-weather';
+  btnWeatherByHoursTitle: string = 'Show current-weather by hours';
 
   constructor(private readonly weatherService: WeatherService) {
 
@@ -31,22 +31,22 @@ export class AppComponent implements OnInit{
 
   onBtnCurWeatherClick() {
     if(this.curWeather) {
-      this.btnCurWeatherTitle = 'Show current weather';
+      this.btnCurWeatherTitle = 'Show current current-weather';
       this.curWeather = false;
     }
     else {
-      this.btnCurWeatherTitle = 'Hide current weather';
+      this.btnCurWeatherTitle = 'Hide current current-weather';
       this.curWeather = true;
     }
   }
 
   onBtnWeatherByHoursClick() {
     if(this.weatherByHours) {
-      this.btnWeatherByHoursTitle = 'Show weather by hours';
+      this.btnWeatherByHoursTitle = 'Show current-weather by hours';
       this.weatherByHours = false;
     }
     else {
-      this.btnWeatherByHoursTitle = 'Hide weather by hours';
+      this.btnWeatherByHoursTitle = 'Hide current-weather by hours';
       this.weatherByHours = true;
     }
   }

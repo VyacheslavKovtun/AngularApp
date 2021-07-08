@@ -1,0 +1,18 @@
+<div class="info">
+  <h2>City: {{ info.name }}</h2>
+  <h6>Country: {{ info.sys.country }}</h6>
+  <p>{{ info.weather[0].main }}</p>
+  <p>Description: {{ info.weather[0].description }}</p>
+  <p>Temperature: {{ (info.main.temp - 273) | number }} C</p>
+  <p>Feels like: {{ (info.main.feels_like - 273) | number }} C</p>
+  <p>Max: {{ (info.main.temp_max - 273) | number }} C</p>
+  <p>Min: {{ (info.main.temp_min - 273) | number }} C</p>
+  <p>Pressure: {{ info.main.pressure }}hPa</p>
+  <p>Humidity: {{ info.main.humidity }}%</p>
+  <p>Visibility: {{ info.visibility }}m</p>
+  <h3 style="font-weight: bold">Wind</h3>
+  <p>Speed: {{ info.wind.speed }} m/s</p>
+  <h3 style="font-weight: bold">Clouds</h3>
+  <p>All: {{ info.clouds.all }}%</p>
+  <p></p>
+</div>

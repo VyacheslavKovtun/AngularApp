@@ -2,7 +2,7 @@
   <button mat-raised-button color="primary" (click)="onBtnCurWeatherClick()">{{ btnCurWeatherTitle }}</button>
   <button mat-raised-button color="primary" (click)="onBtnWeatherByHoursClick()">{{ btnWeatherByHoursTitle }}</button>
   <div class="weather">
-    <app-weather *ngIf="curWeather" [info]="info"></app-weather>
+    <app-cur-weather *ngIf="curWeather" [info]="info"></app-cur-weather>
 
   </div>
 </div>
