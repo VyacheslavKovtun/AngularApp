@@ -1,0 +1,17 @@
+<div class="info">
+  <h3>{{ weatherInfo.dt_txt }}</h3>
+  <h3>{{ weatherInfo.weather[0].main }}</h3>
+  <p>Temperature: {{ (weatherInfo.main.temp - 273) | number }} C</p>
+  <p>Feels like: {{ (weatherInfo.main.feels_like - 273) | number }} C</p>
+  <p>Max: {{ (weatherInfo.main.temp_max - 273) | number }} C</p>
+  <p>Min: {{ (weatherInfo.main.temp_min - 273) | number }} C</p>
+  <p>Pressure: {{ weatherInfo.main.pressure }}hPa</p>
+  <p>Humidity: {{ weatherInfo.main.humidity }}%</p>
+  <p>Temp kf: {{ weatherInfo.main.temp_kf }}</p>
+  <p>Visibility: {{ weatherInfo.visibility }}m</p>
+  <h3 style="font-weight: bold">Wind</h3>
+  <p>Speed: {{ weatherInfo.wind.speed }} m/s</p>
+  <h3 style="font-weight: bold">Clouds</h3>
+  <p>All: {{ weatherInfo.clouds.all }}%</p>
+</div>
+

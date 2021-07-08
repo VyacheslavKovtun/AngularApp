@@ -2,7 +2,13 @@
   <button mat-raised-button color="primary" (click)="onBtnCurWeatherClick()">{{ btnCurWeatherTitle }}</button>
   <button mat-raised-button color="primary" (click)="onBtnWeatherByHoursClick()">{{ btnWeatherByHoursTitle }}</button>
   <div class="weather">
-    <app-cur-weather *ngIf="curWeather" [info]="info"></app-cur-weather>
-
+    <div class="current-weather" *ngIf="curWeather">
+      <h1>Current Weather</h1>
+      <app-cur-weather [info]="info"></app-cur-weather>
+    </div>
+    <div class="hourly-weather" *ngIf="weatherByHours">
+      <h1>Hourly Weather</h1>
+      <app-hourly-weather style="display: inline-block; margin-right: 60px"  *ngFor="let weather of weatherByHoursInfo" [weatherInfo]="weather"></app-hourly-weather>
+    </div>
   </div>
 </div>

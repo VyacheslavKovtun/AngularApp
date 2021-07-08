@@ -1,8 +1,8 @@
-import { Clouds } from "./clouds.interface";
-import { Coord } from "./coord.interface";
+import { Clouds } from "../clouds.interface";
+import { Coord } from "../coord.interface";
 import { Main } from "./main.interface";
 import { Sys } from "./sys.interface";
-import { Weather } from "./weather.interface";
+import { Weather } from "../weather.interface";
 import { Wind } from "./wind.interface";
 
 

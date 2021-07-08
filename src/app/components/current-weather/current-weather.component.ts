@@ -1,5 +1,5 @@
 import {Component, Input} from '@angular/core';
-import { AllWeatherInfo } from 'src/app/services/interfaces/all-weather-info.interface';
+import { AllWeatherInfo } from 'src/app/services/interfaces/current-weather/all-weather-info.interface';
 import { WeatherService } from 'src/app/services/weather.service';
 
 @Component({

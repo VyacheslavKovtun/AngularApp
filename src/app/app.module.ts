@@ -51,11 +51,13 @@ import {CurrentWeatherComponent} from './components/current-weather/current-weat
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { WeatherService } from './services/weather.service';
+import { HourlyWeatherComponent } from './components/hourly-weather/hourly-weather.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CurrentWeatherComponent,
+    HourlyWeatherComponent,
   ],
   imports: [
     A11yModule,

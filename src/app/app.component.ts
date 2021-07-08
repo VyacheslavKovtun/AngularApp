@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
-import { AllWeatherInfo } from './services/interfaces/all-weather-info.interface';
+import { AllWeatherInfo } from './services/interfaces/current-weather/all-weather-info.interface';
 import { WeatherService } from './services/weather.service';
+import {List} from "./services/interfaces/hourly-weather/list.interface";
 
 @Component({
   selector: 'app-root',
@@ -13,6 +13,7 @@ export class AppComponent implements OnInit{
   title = 'AngularApp';
   // @ts-ignore
   info: AllWeatherInfo;
+  weatherByHoursInfo: List[] = [];
   curWeather: boolean = false;
   weatherByHours: boolean = false;
   btnCurWeatherTitle: string = 'Show current current-weather';
@@ -26,6 +27,11 @@ export class AppComponent implements OnInit{
     this.weatherService.getCurrentWeatherByCity('Dnipro', this.API_KEY)
       .subscribe(info => {
         this.info = info;
+      });
+
+    this.weatherService.getWeatherByHours('Dnipro', this.API_KEY)
+      .subscribe(response => {
+        this.weatherByHoursInfo = response.list;
       });
   }
 
